@@ -1,0 +1,63 @@
+name: Bug Report
+description: Report a problem or issue with the activities website
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please provide as much detail as possible to help us fix the issue.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem you encountered. What did you expect to happen?
+      placeholder: "Example: When I click the 'Register' button for Chess Club, nothing happens."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue? Please provide step-by-step instructions.
+      placeholder: |
+        1. Go to the activities page
+        2. Click on 'Chess Club'
+        3. Click the 'Register' button
+        4. See error
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: What part of the website is affected?
+      options:
+        - Activity registration
+        - Activity display/listing
+        - Login/authentication
+        - Filtering and search
+        - Visual appearance/layout
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+      placeholder: "Example: The registration should complete and show a success message."
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or information about the problem.
+      placeholder: "Example: This only happens on Monday mornings, or only for certain activities."
+    validations:
+      required: false

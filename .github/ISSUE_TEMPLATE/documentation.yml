@@ -1,0 +1,69 @@
+name: Documentation Update
+description: Request updates to README files, guides, or other documentation
+title: "[Docs]: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request improvements or corrections to documentation.
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: What documentation needs updating?
+      options:
+        - Main README file
+        - Development guide
+        - User instructions
+        - API documentation
+        - Setup/installation guide
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-issue
+    attributes:
+      label: What is incorrect or missing?
+      description: Describe what's wrong with the current documentation or what's missing.
+      placeholder: "Example: The README doesn't explain how teachers can log in to manage activities."
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-update
+    attributes:
+      label: What should the documentation say?
+      description: Describe what information should be added or how it should be corrected.
+      placeholder: |
+        Example:
+        Add a "Teacher Login" section that explains:
+        - How to access the login button in the top right
+        - What the default teacher credentials are
+        - How to register students for activities after logging in
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: How will you know when this is complete?
+      description: What should be true when the documentation is updated?
+      placeholder: |
+        Example:
+        - A new "Teacher Login" section exists in the main README
+        - It includes step-by-step instructions with examples
+        - Any teacher can follow the instructions to successfully log in
+        - Screenshots or examples are included if helpful
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Provide any other relevant information, examples, or links.
+      placeholder: "Example: Similar to how the student registration is documented, but for teachers."
+    validations:
+      required: false
