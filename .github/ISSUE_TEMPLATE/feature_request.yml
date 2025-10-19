@@ -1,0 +1,72 @@
+name: Feature Request
+description: Request a new feature or enhancement for the activities website
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a new feature! Please provide details to help us understand your request.
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: Describe the feature or enhancement you'd like to see.
+      placeholder: "Example: Add the ability to export a list of all students signed up for an activity."
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-needed
+    attributes:
+      label: Why is this feature needed?
+      description: Explain the problem this feature would solve or the benefit it would provide.
+      placeholder: "Example: Currently, I have to manually write down all participant names. An export feature would save time and reduce errors."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: What type of feature is this?
+      options:
+        - New functionality for activities
+        - Student registration improvements
+        - Teacher/admin tools
+        - Filtering and search improvements
+        - Reporting and exports
+        - User interface improvement
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: How will you know when this is complete?
+      description: Describe what the finished feature should do. Be as specific as possible.
+      placeholder: |
+        Example:
+        - A new "Export" button appears on the activity detail page
+        - Clicking it downloads a CSV file with student names and emails
+        - The file is named after the activity (e.g., "Chess_Club_Participants.csv")
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-solution
+    attributes:
+      label: Suggested Solution (Optional)
+      description: If you have ideas about how to implement this, share them here.
+      placeholder: "Example: Add a download button next to each activity that creates a spreadsheet."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context, mockups, or examples about the feature request.
+    validations:
+      required: false

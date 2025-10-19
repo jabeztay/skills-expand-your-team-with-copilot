@@ -1,0 +1,91 @@
+name: Activity Data Update
+description: Request to add, modify, or remove activity information
+title: "[Data]: "
+labels: ["data", "content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request changes to activity information (add new activities, update existing ones, or remove activities).
+
+  - type: dropdown
+    id: update-type
+    attributes:
+      label: What type of update is needed?
+      options:
+        - Add a new activity
+        - Update an existing activity
+        - Remove/delete an activity
+        - Update multiple activities
+    validations:
+      required: true
+
+  - type: textarea
+    id: activity-details
+    attributes:
+      label: Activity Details
+      description: Provide the activity information that needs to be changed.
+      placeholder: |
+        For NEW activities, include:
+        - Activity name
+        - Description
+        - Schedule (days and times)
+        - Maximum number of participants
+        - Category (sports, arts, academic, community, technology)
+        
+        For UPDATES, include:
+        - Activity name (current name if changing it)
+        - What needs to change (schedule, description, capacity, etc.)
+        - New values
+        
+        For DELETIONS, include:
+        - Activity name to remove
+        - Reason for removal
+    validations:
+      required: true
+
+  - type: textarea
+    id: schedule-details
+    attributes:
+      label: Schedule Information
+      description: If this involves schedule changes, provide specific day(s) and time(s).
+      placeholder: |
+        Example:
+        - Days: Monday, Wednesday, Friday
+        - Time: 3:30 PM - 5:00 PM
+        - OR: Before school (7:00 AM - 8:00 AM)
+        - OR: Weekend (Saturday 10:00 AM - 2:00 PM)
+    validations:
+      required: false
+
+  - type: input
+    id: max-participants
+    attributes:
+      label: Maximum Participants
+      description: If applicable, specify the maximum number of students who can join.
+      placeholder: "Example: 20"
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: How will you know when this is complete?
+      description: Describe what should be true when this update is finished.
+      placeholder: |
+        Example:
+        - The new "Yearbook Committee" activity appears in the activities list
+        - It shows as meeting on Tuesdays from 3:15-4:30 PM
+        - Maximum participants is set to 15
+        - It appears under the "Academic" category
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other relevant information about this data update.
+      placeholder: "Example: This activity replaces the old Photography Club which should be removed."
+    validations:
+      required: false

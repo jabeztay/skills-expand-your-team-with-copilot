@@ -1,0 +1,78 @@
+name: UI/Design Change
+description: Request changes to the website's appearance, colors, or layout
+title: "[Design]: "
+labels: ["design", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your design suggestion! Please describe the visual changes you'd like to see.
+
+  - type: textarea
+    id: current-design
+    attributes:
+      label: Current Design Issue
+      description: What about the current design needs to be changed?
+      placeholder: "Example: The school colors (lime green and white) are not reflected in the website design."
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-design
+    attributes:
+      label: Desired Design
+      description: Describe how you'd like it to look instead.
+      placeholder: "Example: Change the header background to lime green and use white text. Update buttons to match the school colors."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: design-area
+    attributes:
+      label: What part of the website should change?
+      options:
+        - Colors and theme
+        - Header/navigation
+        - Activity cards/listings
+        - Buttons and forms
+        - Text and fonts
+        - Layout and spacing
+        - Images and icons
+        - Overall appearance
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: How will you know when this is complete?
+      description: Describe what the finished design should look like.
+      placeholder: |
+        Example:
+        - Header background is lime green (#32CD32)
+        - All text in the header is white
+        - Primary buttons use lime green background
+        - Design looks good on both desktop and mobile
+    validations:
+      required: true
+
+  - type: textarea
+    id: reference-images
+    attributes:
+      label: Reference Images or Examples (Optional)
+      description: Provide links to images, colors, or other websites that show what you have in mind.
+      placeholder: |
+        Example:
+        - School colors: Lime green (#32CD32) and white (#FFFFFF)
+        - Reference site: https://example.com/design
+        - Mascot images: https://octodex.github.com/
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other details about the design change.
+    validations:
+      required: false
